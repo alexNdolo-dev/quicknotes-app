@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QuickNotes App</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>QuickNotes</h1>
+    <p>Organize your daily tasks, work, and study notes effortlessly.</p>
+  </header>
+
+  <main>
+    <!-- Section 1: Add Note -->
+    <section>
+      <h2>Add a Note</h2>
+      <form id="note-form">
+        <label for="note-input">Note Content</label>
+        <input 
+          type="text" 
+          id="note-input" 
+          placeholder="Enter note text..."
+        >
+
+        <label for="note-category" class="sr-only">Category</label>
+        <select id="note-category">
+          <option value="personal">Personal</option>
+          <option value="work">Work</option>
+          <option value="study">Study</option>
+        </select>
+
+        <button type="submit">Add Note</button>
+      </form>
+      <p id="error-message"></p>
+    </section>
+
+    <!-- Section 2: Your Notes -->
+    <section>
+      <div class="notes-header">
+        <h2>Your Notes</h2>
+        <button id="clear-all-btn">Clear All</button>
+      </div>
+
+      <div class="search-box">
+        <label for="search-input" class="sr-only">Search Notes</label>
+        <input 
+          type="text" 
+          id="search-input" 
+          placeholder="Search notes..."
+        >
+      </div>
+
+      <p id="note-count">You have no notes yet.</p>
+      <ul id="notes-list"></ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 QuickNotes App • Built for Software Engineering Program</p>
+  </footer>
+</body>
+</html>
